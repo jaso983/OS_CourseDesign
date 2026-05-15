@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// ==================== 1. 生产者-消费者问题 ====================
+//1. 生产者-消费者问题
 const int BUFFER_SIZE = 5;
 int buffer[BUFFER_SIZE];
 int in = 0, out = 0;
@@ -51,7 +51,7 @@ void* consumer(void* arg) {
     return nullptr;
 }
 
-// ==================== 2. 读者-写者问题 (读者优先) ====================
+// 2. 读者写者问题 ，读者优先
 int read_count = 0;
 pthread_mutex_t rw_mutex, count_mutex;
 
@@ -89,7 +89,7 @@ void* writer(void* arg) {
     return nullptr;
 }
 
-// ==================== 3. 哲学家进餐问题 ====================
+//3. 哲学家进餐问题
 pthread_mutex_t chopsticks[5];
 
 void* philosopher(void* arg) {
@@ -117,7 +117,7 @@ void* philosopher(void* arg) {
     return nullptr;
 }
 
-// ==================== 主函数：测试菜单 ====================
+// =
 int main() {
     int choice;
     while (true) {

@@ -11,7 +11,7 @@ struct Process {
     string name;
     int arrivalTime;
     int burstTime;
-    int priority;      // 新增：优先级
+    int priority;
     int remainingTime;
     int completionTime;
     int turnaroundTime;
